@@ -1,0 +1,13 @@
+students={
+"Sarim":{"Math":99,
+         "English":100,
+         "Dutch":100
+},
+"Tanshi":{"Math":99,
+          "English":99,
+          "Dutch":0
+  }
+}
+print(students)
+print(students["Sarim"])
+print(students["Tanshi"])
