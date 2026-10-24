@@ -21,7 +21,7 @@ score=0
 direction = 1
 
 def displayScore():
-    screen.draw.text(str((score),(100,300),fontsize=50)) #position of score
+    screen.draw.text(str((score)),(100,300),fontsize=50) #position of score
                      
 
 
@@ -53,11 +53,11 @@ def update():
             bullet.y -= 10
     #the movement of the bugs
     if len(enemies)>0 and (enemies[0].x < 20 or enemies[-1].x > WIDTH-30):
-        moveDown = True
+        movedown = True
         direction = direction*(-1)
     for enemy in enemies:
         enemy.x += 5*direction
-        if moveDown == True:
+        if movedown == True:
             enemy.y += 10
         #to check the collision between the bullet and the enemy
         for bullet in bullets:
@@ -74,5 +74,5 @@ def draw():
     for enemy in enemies:
         enemy.draw()
     ship.draw()
-    displayScore.go()
+    displayScore()
 pgzrun.go()
